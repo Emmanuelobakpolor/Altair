@@ -1,0 +1,219 @@
+/* General Hero Section Styling */
+.hero-bg {
+  background: #0097a7;
+  min-height: 100vh;
+  position: relative;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #00b5b5;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.main-header.scrolled {
+  position: fixed;
+  background: #00b5b5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* CTA Button */
+.cta-btn-1 {
+  background-color: #00b5b5;
+  /* background: #222; */
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+
+.cta-btn:hover {
+  background: #444;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 700px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 36px;
+  color: #d6eaff;
+}
+
+.expert-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 18px 38px;
+  border-radius: 33px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+
+.expert-btn:hover {
+  background: #222;
+}
+
+/* Dashboard Images */
+.dashboard-images {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.dashboard-img {
+  width: 260px;
+  height: 90px;
+  background: #222c;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 8px 32px #0003;
+}
+
+.dashboard-img-1 {
+  background: #1a2636;
+}
+
+.dashboard-img-2 {
+  background: #22304a;
+  width: 180px;
+}
+
+.dashboard-img-3 {
+  background: #2a3a56;
+  width: 220px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Reduce paragraph size */
+  }
+
+  .dashboard-img {
+    width: 200px; /* Reduce image width */
+    height: 80px; /* Reduce image height */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default on smaller screens */
+    flex-direction: column;
+    gap: 10px;
+    background: #0097a7;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .toggle-btn {
+    display: block; /* Show toggle button on smaller screens */
+  }
+
+  .cta-btn {
+    display: none; /* Hide CTA button on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .hero-content p {
+    font-size: 0.9rem; /* Further reduce paragraph size */
+  }
+
+  .dashboard-img {
+    width: 180px; /* Further reduce image width */
+    height: 70px; /* Further reduce image height */
+  }
+
+  .expert-btn {
+    padding: 12px 28px; /* Reduce button padding */
+    font-size: 1rem; /* Reduce button font size */
+  }
+}

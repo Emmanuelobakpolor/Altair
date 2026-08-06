@@ -1,0 +1,165 @@
+/* Book Section */
+.book-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Georgia', serif;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.book-content {
+  max-width: 50%;
+  flex: 1; /* Allow the content to take up available space */
+  margin-bottom: 20px; /* Add spacing below the content for smaller screens */
+}
+
+.book-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  position: relative;
+  max-width: 500px;
+  height: auto; /* Allow the height to adjust dynamically */
+  margin-bottom: 40px;
+}
+
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 20px;
+  border-color: #fff transparent transparent transparent;
+}
+
+.stars {
+  color: #c5ac1d;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.testimonial-card p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 1.8;
+  overflow: hidden;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 70px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.author .quote-icon {
+  font-size: 5.4rem;
+  font-weight: bolder;
+  color: #b4a02c;
+}
+
+.author strong {
+  font-weight: 700;
+}
+
+.author span {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Book Image Section */
+.book-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex: 1; /* Allow the image to take up available space */
+}
+
+.book-image img {
+  max-width: 100%; /* Allow the image to scale responsively */
+  height: auto; /* Maintain the aspect ratio */
+  width: 100%; /* Set the width to 100% for smaller screens */
+  max-width: 400px; /* Limit the maximum width */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.author-details {
+    margin-left: 30px;
+    margin-top: -25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-section {
+    flex-direction: column; /* Stack the content and image vertically */
+    align-items: center;
+  }
+
+  .book-content {
+    max-width: 100%; /* Allow the content to take full width */
+    text-align: center; /* Center-align the text */
+  }
+
+  .book-content h2 {
+    font-size: 2rem; /* Reduce the font size for smaller screens */
+  }
+
+  .testimonial-card {
+    max-width: 100%; /* Allow the card to take full width */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .author {
+    flex-direction: column; /* Stack the author details vertically */
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .author .quote-icon {
+    font-size: 4rem; /* Reduce the size of the quote icon */
+  }
+
+  .book-image img {
+    max-width: 300px; /* Reduce the maximum width of the image */
+  }
+}
+
+@media (max-width: 480px) {
+  .book-content h2 {
+    font-size: 1.8rem; /* Further reduce the font size for very small screens */
+  }
+
+  .testimonial-card {
+    padding: 15px; /* Reduce padding further for very small screens */
+  }
+
+  .author .quote-icon {
+    font-size: 3.5rem; /* Further reduce the size of the quote icon */
+  }
+
+  .book-image img {
+    max-width: 250px; /* Further reduce the maximum width of the image */
+  }
+}

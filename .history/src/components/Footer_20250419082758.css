@@ -1,0 +1,172 @@
+/* General Footer Styling */
+.footer {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Links Section */
+.links-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.links-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-section li {
+  margin-bottom: 10px;
+}
+
+.links-section li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.links-section li a:hover {
+  text-decoration: underline;
+}
+
+/* Image Section */
+.image-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  background-color: #fff; /* Set background color to white */
+  padding: 20px; /* Add padding inside the section */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  text-align: center; /* Center-align the content */
+  max-width: 600px; /* Limit the width of the section */
+
+  /* Center the section horizontally */
+}
+
+.newsletter-section h3 {
+  font-size: 1.5rem;
+  color: #333; /* Dark text color for the heading */
+  margin-bottom: 10px;
+}
+
+.newsletter-section p {
+  font-size: 1rem;
+  color: #666; /* Subtle text color for the paragraph */
+  margin-bottom: 15px;
+}
+
+.newsletter-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add spacing between form elements */
+}
+
+.newsletter-section input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc; /* Add a border to inputs */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.newsletter-section button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #0097a7; /* Blue background for the button */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer;
+}
+
+.newsletter-section button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Book Section */
+.book-section {
+  display: flex;
+  flex-direction: row; /* Align image and text side by side */
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-top: 20px;
+  gap: 20px;
+  background-color: transparent;
+}
+.book-section img {
+  max-width: 150px; /* Set a fixed width for the image */
+  height: auto;
+}
+
+.book-section .book-description {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold; /* Make the text bold */
+  line-height: 1.5; /* Improve readability */
+}
+
+.book-section .learn-more {
+  margin-top: 50px;
+  font-size: 1rem;
+  color: #0097a7;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.book-section .learn-more:hover {
+  text-decoration: underline;
+}
+
+/* Scroll-Up Button */
+.scroll-up-button button {
+  background-color: #0097a7;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.scroll-up-button button:hover {
+  background-color: #0056b3;
+}
+
+/* Bottom Section */
+.bottom-section {
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+.bottom-section .copyright {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.bottom-section .links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.bottom-section .links a:hover {
+  text-decoration: underline;
+}
