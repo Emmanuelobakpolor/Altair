@@ -76,6 +76,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--nav-h) + 12px);
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-deep) transparent;
 }
 
 html,
@@ -120,6 +122,57 @@ button {
 
 ul {
   list-style: none;
+}
+
+/* ── Scrollbar — Midnight Signal ── */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-deep) 100%);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--bg-deep);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--accent-bright) 0%, var(--accent-dim) 100%);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg-deep);
+}
+
+/* Slim variant for inner scroll containers (dropdowns, panels, lists) */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-deep) transparent;
+}
+
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: var(--accent-deep);
+  border: none;
+  border-radius: var(--radius-pill);
+}
+
+.scroll-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
 /* ── Shared layout ── */
