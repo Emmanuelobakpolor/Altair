@@ -42,14 +42,14 @@
   left: 0.85rem;
   padding: 0.3rem 0.7rem;
   border-radius: var(--radius-pill);
-  background: rgba(7, 11, 18, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   border: 1px solid var(--border-subtle);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--accent-bright);
+  color: var(--accent-dim);
 }
 
 .insight-body {

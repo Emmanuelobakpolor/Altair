@@ -27,10 +27,10 @@
 .about-card--mission {
   background: linear-gradient(
     160deg,
-    rgba(45, 212, 191, 0.08),
-    rgba(17, 26, 43, 0.9) 40%
+    rgba(37, 99, 235, 0.06),
+    rgba(255, 255, 255, 0.95) 40%
   );
-  border-color: rgba(45, 212, 191, 0.2);
+  border-color: rgba(37, 99, 235, 0.18);
   display: flex;
   flex-direction: column;
 }
@@ -58,9 +58,9 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  background: rgba(45, 212, 191, 0.1);
-  border: 1px solid rgba(45, 212, 191, 0.25);
-  color: var(--accent-bright);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  color: var(--accent-dim);
 }
 
 @media (max-width: 800px) {

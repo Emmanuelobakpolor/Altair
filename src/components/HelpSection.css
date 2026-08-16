@@ -29,11 +29,11 @@
   place-items: center;
   background: linear-gradient(
     135deg,
-    rgba(45, 212, 191, 0.18),
-    rgba(14, 165, 233, 0.1)
+    rgba(37, 99, 235, 0.14),
+    rgba(14, 165, 233, 0.08)
   );
-  border: 1px solid rgba(45, 212, 191, 0.2);
-  color: var(--accent-bright);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  color: var(--accent-dim);
   font-size: 1.2rem;
   transition: transform var(--dur) var(--ease-spring),
     box-shadow var(--dur) ease;
