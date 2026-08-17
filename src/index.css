@@ -6,45 +6,78 @@
 :root {
   /* Surfaces */
   --bg-deep: #ffffff;
-  --bg-base: #f6f9fd;
-  --bg-elevated: #eef3fa;
+  --bg-base: #f5fafb;
+  --bg-elevated: #edf5f6;
   --bg-card: rgba(255, 255, 255, 0.85);
   --bg-card-solid: #ffffff;
-  --bg-glass: rgba(37, 99, 235, 0.04);
+  --bg-glass: rgba(30, 113, 122, 0.04);
 
   /* Borders */
   --border-subtle: rgba(15, 23, 42, 0.09);
-  --border-glow: rgba(37, 99, 235, 0.35);
+  --border-glow: rgba(30, 113, 122, 0.35);
 
   /* Text */
   --text-primary: #0f1b2d;
   --text-secondary: #48576b;
   --text-muted: #7c8aa0;
 
-  /* Accents — blue, professional and elegant */
-  --accent: #2563eb;
-  --accent-bright: #3b82f6;
-  --accent-dim: #1d4ed8;
-  --accent-deep: #1e3a8a;
-  --warm: #2563eb;
-  --warm-soft: #3b82f6;
+  /* Accents — matched to logo */
+  --accent: #1e717a;
+  --accent-bright: #268893;
+  --accent-dim: #195e66;
+  --accent-deep: #124950;
+
+  --warm: #1e717a;
+  --warm-soft: #268893;
   --danger: #dc2626;
 
   /* Gradients */
-  --grad-accent: linear-gradient(135deg, #2563eb 0%, #0ea5e9 50%, #1e40af 100%);
-  --grad-warm: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
-  --grad-text: linear-gradient(120deg, #1e3a8a 0%, #2563eb 45%, #0ea5e9 100%);
-  --grad-hero: radial-gradient(ellipse 80% 60% at 20% 20%, rgba(37, 99, 235, 0.08), transparent 55%),
-    radial-gradient(ellipse 70% 50% at 85% 15%, rgba(14, 165, 233, 0.07), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 70% 80%, rgba(37, 99, 235, 0.05), transparent 50%),
+  --grad-accent: linear-gradient(
+    135deg,
+    #1e717a 0%,
+    #268893 50%,
+    #195e66 100%
+  );
+
+  --grad-warm: linear-gradient(
+    135deg,
+    #195e66 0%,
+    #1e717a 100%
+  );
+
+  --grad-text: linear-gradient(
+    120deg,
+    #124950 0%,
+    #1e717a 45%,
+    #268893 100%
+  );
+
+  --grad-hero:
+    radial-gradient(
+      ellipse 80% 60% at 20% 20%,
+      rgba(30, 113, 122, 0.08),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 70% 50% at 85% 15%,
+      rgba(38, 136, 147, 0.07),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 70% 80%,
+      rgba(30, 113, 122, 0.05),
+      transparent 50%
+    ),
     var(--bg-base);
 
   /* Shadows & glow */
   --shadow-sm: 0 4px 16px rgba(15, 23, 42, 0.06);
   --shadow-md: 0 12px 40px rgba(15, 23, 42, 0.08);
   --shadow-lg: 0 24px 64px rgba(15, 23, 42, 0.12);
-  --glow-accent: 0 0 40px rgba(37, 99, 235, 0.16);
-  --glow-btn: 0 8px 28px rgba(37, 99, 235, 0.28);
+
+  --glow-accent: 0 0 40px rgba(30, 113, 122, 0.16);
+  --glow-btn: 0 8px 28px rgba(30, 113, 122, 0.28);
+
 
   /* Typography */
   --font-display: "Syne", system-ui, sans-serif;
