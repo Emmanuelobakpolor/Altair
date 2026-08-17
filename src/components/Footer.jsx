@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { whatsappFullstackDevLink } from "../lib/contact";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -17,6 +18,15 @@ const Footer = () => {
             <i className="fas fa-envelope" aria-hidden="true" />
             chukoz71@gmail.com
           </a>
+          <a
+            href={whatsappFullstackDevLink("Fullstack Development services")}
+            className="footer-email"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-whatsapp" aria-hidden="true" />
+            08135578170
+          </a>
         </div>
 
         <div className="footer-col">
@@ -33,6 +43,24 @@ const Footer = () => {
             </li>
             <li>
               <a href="#contact">Transformation Workshops</a>
+            </li>
+            <li>
+              <a
+                href={whatsappFullstackDevLink("Fullstack Mobile Development")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fullstack Mobile Development
+              </a>
+            </li>
+            <li>
+              <a
+                href={whatsappFullstackDevLink("Fullstack Web Development")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fullstack Web Development
+              </a>
             </li>
           </ul>
         </div>

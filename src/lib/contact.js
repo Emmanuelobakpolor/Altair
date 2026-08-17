@@ -12,3 +12,11 @@ export const whatsappTrainingLink = (courseName, message) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     message || `Hi Altair, I'd like to enquire about the ${courseName}.`
   )}`;
+
+// Dedicated contact number for Fullstack Mobile & Web Development enquiries.
+const FULLSTACK_DEV_NUMBER = "2348135578170";
+
+export const whatsappFullstackDevLink = (courseName, message) =>
+  `https://wa.me/${FULLSTACK_DEV_NUMBER}?text=${encodeURIComponent(
+    message || `Hi Altair, I'd like to enquire about the ${courseName}.`
+  )}`;

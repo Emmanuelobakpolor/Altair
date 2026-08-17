@@ -1,7 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./herosection.css";
 import logo from "../assets/alt_logo.png";
-import { WHATSAPP_CALL_LINK, whatsappTrainingLink } from "../lib/contact";
+import {
+  WHATSAPP_CALL_LINK,
+  whatsappTrainingLink,
+  whatsappFullstackDevLink,
+} from "../lib/contact";
 
 const NAV_LINKS = [
   { label: "Services", href: "#services" },
@@ -22,11 +26,26 @@ const TRAININGS = [
   { name: "Practicum Program", icon: "fas fa-laptop-code" },
   { name: "Data Science Certificates", icon: "fas fa-certificate" },
   {
+    name: "Fullstack Mobile Development",
+    icon: "fas fa-mobile-alt",
+    contact: "fullstack",
+  },
+  {
+    name: "Fullstack Web Development",
+    icon: "fas fa-code",
+    contact: "fullstack",
+  },
+  {
     name: "Schedule",
     icon: "fas fa-calendar-alt",
     message: "Hi Altair, I'd like to see the upcoming training schedule.",
   },
 ];
+
+const trainingLink = (course) =>
+  course.contact === "fullstack"
+    ? whatsappFullstackDevLink(course.name, course.message)
+    : whatsappTrainingLink(course.name, course.message);
 
 const SiteHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -100,7 +119,7 @@ const SiteHeader = () => {
                 {TRAININGS.map((course) => (
                   <li key={course.name}>
                     <a
-                      href={whatsappTrainingLink(course.name, course.message)}
+                      href={trainingLink(course)}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => {
@@ -144,7 +163,7 @@ const SiteHeader = () => {
               {TRAININGS.map((course) => (
                 <li key={course.name}>
                   <a
-                    href={whatsappTrainingLink(course.name, course.message)}
+                    href={trainingLink(course)}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={closeMenu}

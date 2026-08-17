@@ -41,6 +41,10 @@
   transition: color var(--dur-fast) ease, gap var(--dur-fast) ease;
 }
 
+.footer-email + .footer-email {
+  margin-top: 0.5rem;
+}
+
 .footer-email:hover {
   color: var(--accent-bright);
   gap: 0.7rem;
