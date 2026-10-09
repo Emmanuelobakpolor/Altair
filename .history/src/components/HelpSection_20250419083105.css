@@ -1,0 +1,139 @@
+/* Help Section */
+.help-section {
+  padding: 60px 7.5%;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.help-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Help Cards Container */
+.help-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Individual Help Card */
+.help-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Icon */
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Card Title */
+.help-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #39414d;
+}
+
+/* Card Description */
+.help-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: poppins, sans-serif;
+}
+
+/* Learn More Link */
+.learn-more {
+  font-size: 1rem;
+  color: #0097a7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .help-section h2 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .help-cards {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 30px; /* Reduce gap between cards */
+  }
+
+  .help-card {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .card-icon svg {
+    width: 30px; /* Reduce icon size */
+    height: 30px;
+  }
+
+  .help-card h3 {
+    font-size: 1.3rem; /* Reduce title font size */
+  }
+
+  .help-card p {
+    font-size: 0.9rem; /* Reduce description font size */
+  }
+
+  .learn-more {
+    font-size: 0.9rem; /* Reduce link font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .help-section h2 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .help-card {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .card-icon svg {
+    width: 25px; /* Further reduce icon size */
+    height: 25px;
+  }
+
+  .help-card h3 {
+    font-size: 1.2rem; /* Further reduce title font size */
+  }
+
+  .help-card p {
+    font-size: 0.8rem; /* Further reduce description font size */
+  }
+
+  .learn-more {
+    font-size: 0.8rem; /* Further reduce link font size */
+  }
+}

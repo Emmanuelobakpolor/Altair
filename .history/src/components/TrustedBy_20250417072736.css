@@ -1,0 +1,39 @@
+.trusted-by-section {
+  background: #fff;
+  padding: 80px 30px; /* Increased padding for more spacing */
+  text-align: center;
+}
+
+.trusted-by-section h2 {
+  font-size: 2rem; 
+  font-weight: 700;
+  color: #444; 
+  margin-bottom: 40px; 
+  font-family: 'Georgia', serif;
+}
+
+.logo-carousel-container {
+  width: 95%; 
+  max-width: 1400px; /* Increased max width for larger screens */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap; 
+}
+.logo-carousel {
+  display: flex;
+  width: max-content;
+  transition: transform 0.3s ease-in-out; 
+  padding-bottom: 20px;
+}
+
+.logo-carousel img {
+  height: 80px;
+  margin: 0 60px; 
+  transition: transform 0.2s ease, filter 0.2s ease; 
+}
+
+.logo-carousel img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0); 
+}

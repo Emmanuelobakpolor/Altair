@@ -1,0 +1,141 @@
+/* General section styling */
+.business-insights-section {
+  padding: 40px 20px;
+  font-family: 'Georgia', serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.business-insights-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Grid layout for cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 90px;
+}
+
+/* Individual card styling */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card image section */
+.card-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Overlay effect on the image */
+.card-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+}
+
+/* Card content section */
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+  position: relative;
+  top: -180px; /* Position the title over the image */
+  left: 20px;
+  z-index: 1;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Read More button */
+.read-more-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #0097a7;#0097a7
+  background-color: transparent;
+  border: 2px solid #0097a7;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #0097a7;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .business-insights-section h2 {
+    font-size: 2rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 40px; /* Reduce gap between cards */
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+    top: -150px; /* Adjust for smaller screens */
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .read-more-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px; /* Reduce button size */
+  }
+}
+
+@media (max-width: 480px) {
+  .business-insights-section h2 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+    top: -140px; /* Adjust for very small screens */
+  }
+
+  .card-content p {
+    font-size: 0.8rem;
+  }
+
+  .read-more-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px; /* Further reduce button size */
+  }
+}
