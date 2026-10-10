@@ -1,5 +1,5 @@
 // TODO: replace with the real business WhatsApp number (international format, no symbols)
-const WHATSAPP_NUMBER = "234810891194";
+const WHATSAPP_NUMBER = "2348130891194";
 
 const WHATSAPP_MESSAGE = "Hi Altair, I'd like to book a 20-minute call.";
 

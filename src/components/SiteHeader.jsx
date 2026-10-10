@@ -69,6 +69,23 @@ const SiteHeader = () => {
   }, [isMenuOpen]);
 
   useEffect(() => {
+    if (!isMenuOpen) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") closeMenu();
+    };
+    const desktopQuery = window.matchMedia("(min-width: 981px)");
+    const onBreakpoint = (e) => {
+      if (e.matches) closeMenu();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    desktopQuery.addEventListener("change", onBreakpoint);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      desktopQuery.removeEventListener("change", onBreakpoint);
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
     if (!isTrainingsOpen) return;
     const onClickOutside = (e) => {
       if (trainingsRef.current && !trainingsRef.current.contains(e.target)) {
@@ -92,7 +109,9 @@ const SiteHeader = () => {
   };
 
   return (
-    <header className={`hero-header ${isScrolled ? "is-scrolled" : ""}`}>
+    <header
+      className={`hero-header ${isScrolled ? "is-scrolled" : ""} ${isMenuOpen ? "is-menu-open" : ""}`}
+    >
       <nav className="hero-nav container">
         <a href="#home" className="hero-logo" onClick={closeMenu}>
           <img src={logo} alt="Altair" width={36} height={36} />
@@ -138,14 +157,6 @@ const SiteHeader = () => {
             </div>
           </li>
 
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} onClick={closeMenu}>
-                {link.label}
-              </a>
-            </li>
-          ))}
-
           <li className="hero-links-mobile-trainings">
             <button
               type="button"
@@ -156,6 +167,7 @@ const SiteHeader = () => {
               <span>
                 <i className="fas fa-graduation-cap" aria-hidden="true" />
                 Trainings
+                <small className="hero-mobile-trainings-count">{TRAININGS.length}</small>
               </span>
               <i className="fas fa-chevron-down" aria-hidden="true" />
             </button>
@@ -177,6 +189,14 @@ const SiteHeader = () => {
               ))}
             </ul>
           </li>
+
+          {NAV_LINKS.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={closeMenu}>
+                {link.label}
+              </a>
+            </li>
+          ))}
 
           <li className="hero-links-cta">
             <a
