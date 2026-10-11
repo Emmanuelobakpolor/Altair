@@ -14,7 +14,7 @@ export const whatsappTrainingLink = (courseName, message) =>
   )}`;
 
 // Dedicated contact number for Fullstack Mobile & Web Development enquiries.
-const FULLSTACK_DEV_NUMBER = "2348135578170";
+const FULLSTACK_DEV_NUMBER = "2348130891194";
 
 export const whatsappFullstackDevLink = (courseName, message) =>
   `https://wa.me/${FULLSTACK_DEV_NUMBER}?text=${encodeURIComponent(
